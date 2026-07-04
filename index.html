@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> jay Supermarket</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JAY  Supermarket</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">🛒 JAY Supermarket</div>
+
+            <input type="text" id="search" placeholder="Search Products...">
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li>
+                    <a href="cart.html">
+                        Cart (<span id="cart-count">0</span>)
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Skip the Billing Queue</h1>
+            <p>
+                Shop, Add to Cart, Pay Online, and Walk Out.
+            </p>
+
+            <a href="#products" class="btn">
+                Start Shopping
+            </a>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+
+        <h2>Categories</h2>
+
+        <div class="category-container">
+
+            <button class="category-btn" data-category="All">All</button>
+            <button class="category-btn" data-category="Fruits">Fruits</button>
+            <button class="category-btn" data-category="Vegetables">Vegetables</button>
+            <button class="category-btn" data-category="Dairy">Dairy</button>
+            <button class="category-btn" data-category="Snacks">Snacks</button>
+            <!-- <button class="category-btn" data-category="choclates">choclates</button> -->
+            <!-- <button class="category-btn" data-category="BISCUITS">biscuits</button> -->
+
+
+        </div>
+
+    </section>
+
+    <!-- Products -->
+
+<section id="products">
+
+        <h2>Our Products</h2>
+
+        <div class="product-container" id="product-container">
+
+        <div class="product">
+
+            <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=400" alt="Fresh Apples">
+
+            <div class="product-info">
+
+                <h3>Fresh Apples</h3>
+
+                <p>Fruits</p>
+
+                <p class="price">₹120</p>
+
+                <button class="add-cart" onclick="addToCart(1)">
+                Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+        
+
+        <div class="product">
+
+            <img src="https://images.unsplash.com/photo-1603833665858-e61d17a86224?w=400" alt="Bananas">
+
+            <div class="product-info">
+
+                <h3>Bananas</h3>
+
+                <p>Fruits</p>
+
+                <p class="price">₹60</p>
+
+                <button class="add-cart" onclick="addToCart(2)">
+                Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+        
+
+        <div class="product">
+
+            <img src="https://images.unsplash.com/photo-1546094096-0df4bcaaa337?w=400" alt="Tomatoes">
+
+            <div class="product-info">
+
+                <h3>Tomatoes</h3>
+
+                <p>Vegetables</p>
+
+                <p class="price">₹40</p>
+
+                <button class="add-cart" onclick="addToCart(3)">
+                Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+        
+
+        <div class="product">
+
+            <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=400" alt="Potatoes">
+
+            <div class="product-info">
+
+                <h3>Potatoes</h3>
+
+                <p>Vegetables</p>
+
+                <p class="price">₹35</p>
+
+                <button class="add-cart" onclick="addToCart(4)">
+                Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+        
+
+        <div class="product">
+
+            <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?w=400" alt="Milk">
+
+            <div class="product-info">
+
+                <h3>Milk</h3>
+
+                <p>Dairy</p>
+
+                <p class="price">₹65</p>
+
+                <button class="add-cart" onclick="addToCart(5)">
+                Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+        
+
+        <div class="product">
+
+            <img src="https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=400" alt="Cheese">
+
+            <div class="product-info">
+
+                <h3>Cheese</h3>
+
+                <p>Dairy</p>
+
+                <p class="price">₹180</p>
+
+                <button class="add-cart" onclick="addToCart(6)">
+                Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+        
+
+        <div class="product">
+
+            <img src="https://images.unsplash.com/photo-1585238342024-78d387f4a707?w=400" alt="Potato Chips">
+
+            <div class="product-info">
+
+                <h3>Potato Chips</h3>
+
+                <p>Snacks</p>
+
+                <p class="price">₹30</p>
+
+                <button class="add-cart" onclick="addToCart(7)">
+                Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+        
+
+        <div class="product">
+
+            <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400" alt="Cookies">
+
+            <div class="product-info">
+
+                <h3>Cookies</h3>
+
+                <p>Snacks</p>
+
+                <p class="price">₹90</p>
+
+                <button class="add-cart" onclick="addToCart(8)">
+                Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+        </div>
+
+
+          
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>© 2026 Smart Supermarket | Queue-Free Shopping</p>
+
+    </footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+</body>
+</html>

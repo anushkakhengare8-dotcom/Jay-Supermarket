@@ -1,0 +1,172 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Receipt</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+    background:#f4f4f4;
+}
+
+.receipt{
+    max-width:600px;
+    margin:50px auto;
+    background:#fff;
+    padding:40px;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+.success{
+    text-align:center;
+    color:green;
+    font-size:30px;
+}
+
+.receipt h2{
+    text-align:center;
+    margin-top:15px;
+}
+
+.line{
+    border-top:2px dashed #ccc;
+    margin:25px 0;
+}
+
+.details p{
+    font-size:18px;
+    margin:15px 0;
+}
+
+button{
+    padding:15px 30px;
+    margin:10px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.print-btn{
+    background:#2E7D32;
+    color:white;
+}
+
+.home-btn{
+    background:#1976D2;
+    color:white;
+}
+
+.btns{
+    text-align:center;
+    margin-top:30px;
+}
+
+footer{
+    margin-top:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">
+🛒 Smart Supermarket
+</div>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<div class="receipt">
+
+<div class="success">
+✅ Payment Successful
+</div>
+
+<h2>Digital Receipt</h2>
+
+<div class="line"></div>
+
+<div class="details">
+
+<p><strong>Order ID :</strong> <span id="orderId"></span></p>
+
+<p><strong>Date :</strong> <span id="date"></span></p>
+
+<p><strong>Amount Paid :</strong> ₹<span id="amount"></span></p>
+
+<p><strong>Payment Status :</strong> Paid</p>
+
+<p><strong>Thank you for shopping with Smart Supermarket!</strong></p>
+
+</div>
+
+<div class="line"></div>
+
+<div class="btns">
+
+<button class="print-btn" onclick="window.print()">
+🖨 Print Receipt
+</button>
+
+<button class="home-btn" onclick="goHome()">
+🏠 Continue Shopping
+</button>
+
+</div>
+
+</div>
+
+<footer>
+
+<p style="text-align:center;">
+© 2026 Smart Supermarket
+</p>
+
+</footer>
+
+<script>
+
+const order = JSON.parse(localStorage.getItem("order"));
+
+if(order){
+
+document.getElementById("orderId").innerHTML = order.orderId;
+
+document.getElementById("date").innerHTML = order.date;
+
+document.getElementById("amount").innerHTML = order.total;
+
+}
+
+function goHome(){
+
+localStorage.removeItem("order");
+
+window.location.href="index.html";
+
+}
+
+</script>
+
+</body>
+</html>
